@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Amazing MarcoPolo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=switzer@1&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section id="game-container">
+        <h1>Marco/Polo Game!</h1>
+    
+        <!-- LOGIN SECTION -->
+        <section id="login">
+            <h2>Welcome!</h2>
+            <form id="login-form">
+                <label for="username" id="usernameLabel">Please enter your username</label>
+                <input type="text" name="username" id="username" required>
+                <input type="submit" value="Join Game">
+            </form>
+        </section>
+    
+        <!-- WAITING ROOM -->
+        <section id="waiting-room" style="display: none;">
+            <h2 id="waiting-welcome"></h2>
+            <p>Waiting for other players to join...</p>
+        </section>
+    
+        <!-- GAME SECTION -->
+        <section id="game-section" style="display: none;"></section>
+    </section>
+    
+    <script src="https://cdn.socket.io/4.8.1/socket.io.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

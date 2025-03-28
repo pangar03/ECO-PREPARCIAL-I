@@ -51,6 +51,7 @@ loginForm.addEventListener("submit", (e) => {
         waitingRoom.style.display = "flex";
         waitingMessage.innerHTML = `Welcome ${userData.username}!, you are ${userData.role}`;
         if(data.usersCounter === 3){
+          // NO SE DEBE HACER EMIT, DEBE SER CON UN HTTP REQUEST (FETCH)
           socket.emit("start-game");
         }
         return data;
